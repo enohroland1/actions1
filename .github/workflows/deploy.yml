@@ -24,6 +24,8 @@ jobs:
         run: npm test
       - name: Output information
         run: echo "..."
+      - name: git information
+        run: echo "${{ toJson(github) }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
